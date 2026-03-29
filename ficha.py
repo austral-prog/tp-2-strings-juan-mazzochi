@@ -24,4 +24,64 @@ def ficha():
     #   - Código secreto: nombre invertido en mayúsculas
     #   - Las 3 notas, su suma, promedio y promedio entero
     #   - Cierre decorativo usando repetición de string ("=" * 24)
-    pass
+    nombre = input("Ingrese nombre completo: ")
+    mail = input("Ingrese email: ")
+    nota1 = int(input("Ingrese nota 1: "))
+    nota2 = int(input("Ingrese nota 2: "))
+    nota3 = int(input("Ingrese nota 3: "))
+    print("""========================
+    FICHA DEL ALUMNO
+========================""")
+    nombre = nombre.title()
+    nombre = nombre.strip()
+    mennombre = f"Nombre: {nombre}"
+    mail = mail.lower()
+    mail = mail.strip()
+    menemail = f"Email: {mail}"
+    print(mennombre)
+    print(menemail)
+    caracteres = len(nombre)
+    mencaracteres = f"Caracteres: {caracteres}"
+    print(mencaracteres)
+    #iniciales = nombre.find          #falta
+    espacio = nombre.find(" ")
+    iniciales = nombre[0] + nombre[espacio + 1]
+    print(f"Iniciales: {iniciales}")
+    #usuario =                         #falta
+    nombre_lower = nombre.lower()
+    apellido = nombre_lower[espacio + 1:]
+    nombre_solo = nombre_lower[:espacio]
+    usuario = apellido + "." + nombre_solo
+    print(f"Usuario: {usuario}")
+    arroba = "@" in mail
+    menarroba = f"Email Valido : {arroba}"
+    print(menarroba)
+    #dominio
+    pos_arroba = mail.find("@")
+    dominio = mail[pos_arroba + 1:]
+    print(f"Dominio: {dominio}")
+    #nombre de archivo
+    nombre_archivo = nombre.replace(" ", "_")
+    print(f"Nombre para archivo: {nombre_archivo}")
+    cant_a = nombre.count("a")
+    menas = f"Cantidad de as: {cant_a}"
+    print(menas)
+    codigo = nombre.upper()[::-1]
+    mencodigo = f"Codigo secreto: {codigo}"
+    print(mencodigo)
+    mennota1 = f"Nota 1: {nota1}"
+    print(mennota1)
+    mennota2 = f"Nota 2: {nota2}"
+    print(mennota2)
+    mennota3 = f"Nota 3: {nota3}"
+    print(mennota3)
+    suma = nota1 + nota2 + nota3
+    mensuma = f"Suma: {suma}"
+    print(mensuma)
+    promedio = suma / 3
+    menpromedio = f"Promedio: {promedio}"
+    print(menpromedio)
+    prom_entero = int(promedio)
+    print(f"Promedio entero: {prom_entero}")
+    print("========================")
+ficha()
