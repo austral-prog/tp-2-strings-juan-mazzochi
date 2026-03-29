@@ -12,7 +12,7 @@ def string_info():
     menpletra = f"Primera Letra: {pletra}"
     print(menpletra)
     uletra = palabra[-1]
-    menuletra = f"Ùltima Letra: {uletra}"
+    menuletra = f"Ultima Letra: {uletra}"
     print(menuletra)
     repetido = palabra[:]*3
     menrepetido = f"Repetida: {repetido}"
